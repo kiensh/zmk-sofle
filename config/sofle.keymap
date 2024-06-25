@@ -93,14 +93,14 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  `    |  !   |  @   |  #    |  $    |  %   |                |  ^   |  &   |  *   |  (   |   )   |       |
 // |       | INS  | PSCR | GUI   |       |      |                |      | PGDN | PGUP |      |       |  DEL  |
-// | CAPS  | ALT  | CTRL | SHIFT |       |      |                |  <-  |   v  |   ^  |  ->  |       | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |  Pre |  PP  | Next |       |       |
+// | CAPS  | Pre  |  PP  | Next  |       |      |                |  <-  |   v  |   ^  |  ->  |       | BKSPC |
+// |       |      |      |  -    |  =    |      |      |  |      |  /   |  [   |  ]   |      |       |       |
 //                |      |       |       |      |      |  |      |      |      |      |      |
             bindings = <
 &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                        &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                           &trans      &kp PG_DN   &kp PG_UP    &trans      &trans     &kp DEL
-&kp CLCK   &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &trans                           &kp LEFT    &kp DOWN    &kp UP       &kp RIGHT   &trans     &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans     &trans      &kp K_PREV  &kp K_PP     &kp K_NEXT   &trans     &trans
+&kp CLCK   &kp K_PREV   &kp K_PP     &kp K_NEXT   &trans       &trans                           &kp LEFT    &kp DOWN    &kp UP       &kp RIGHT   &trans     &kp BSPC
+&trans     &trans       &trans       &kp MINUS    &kp EQUAL    &trans        &trans  &trans     &kp FSLH    &kp LBKT    &kp RBKT     &trans      &trans     &trans
                         &trans       &trans       &trans       &trans        &trans  &trans     &trans      &trans      &trans       &trans
             >;
 
