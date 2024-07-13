@@ -37,13 +37,13 @@
 // |  ESC  |  '  |  ,  |  .   |  P   |   Y   |                   |   F   |  G    |  C    |  R   |   L   | BKSPC |
 // |  TAB  |  A  |  O  |  E   |  U   |   I   |                   |   D   |  H    |  T    |  N   |   S   |   -   |
 // | SHIFT |  ;  |  Q  |  J   |  K   |   X   |  MUTE  |  |       |   B   |  M    |  W    |  V   |   Z   | SHIFT |
-//               |LOWER|  GUI |  ALT |  CTRL |  SPACE |  | ENTER |  GUI  |  ALT  |  TOG  | RAISE|
+//               |LOWER|  GUI |  ALT |  CTRL |  SPACE |  | ENTER |  GUI  |  ALT  | CRTL  | RAISE|
             bindings = <
 &kp TILDE  &kp N1   &kp N2    &kp N3   &kp N4   &kp N5                           &kp N6   &kp N7    &kp N8    &kp N9   &kp N0   &kp BSLH
 &kp ESC    &kp SQT  &kp COMMA &kp DOT  &kp P    &kp Y                            &kp F    &kp G     &kp C     &kp R    &kp L    &kp BSPC
 &kp TAB    &kp A    &kp O     &kp E    &kp U    &kp I                            &kp D    &kp H     &kp T     &kp N    &kp S    &kp MINUS
-&kp LSHFT  &kp SEMI &kp Q     &kp J    &kp K    &kp X    &kp K_MUTE &none        &kp B    &kp M     &kp W     &kp V    &kp Z    &kp RSHIFT
-                  &mo LOWER &kp LGUI &kp LALT &kp LCTRL  &kp SPACE  &kp RET  &kp RGUI  &kp RALT  &to QWERTY  &mo RAISE
+&kp LSHFT  &kp SEMI &kp Q     &kp J    &kp K    &kp X    &kp K_MUTE     &none    &kp B    &kp M     &kp W     &kp V    &kp Z    &kp RSHIFT
+                  &mo LOWER &kp LGUI &kp LALT &kp LCTRL  &kp SPACE      &kp RET  &kp RGUI  &kp RALT  &kp RCTRL  &mo RAISE
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOL_UP K_VOL_DN &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -112,14 +112,14 @@
 // | BTCLR  |  BT0    |  BT1    |   BT2   |   BT3   |   BT4   |                  |      |      |       |      |       |       |
 // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
-// |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
+// | QWERTY |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
 &none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &none
-&none             &none           &none           &none           &none           &none            &rgb_ug RGB_TOG &none  &none &none &none &none &none &none
+&to QWERTY        &none           &none           &none           &none           &none            &rgb_ug RGB_TOG &none  &none &none &none &none &none &none
                                   &none           &none           &none           &none            &none           &none  &none &none &none &none
             >;
 
