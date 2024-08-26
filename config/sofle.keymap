@@ -75,13 +75,13 @@
 // |   `   |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |       |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
 // | CAPS  |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |       |
-// |       |     |     |  -   |  =   |      |        |  |       |  /   |  [    |  ]    |      |       |       |
+// |       |     |  _  |  -   |  =   |  +   |        |  |       |  {   |  [    |  ]    |  }   |   /   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &kp GRAVE &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
 &trans    &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
 &kp CLCK  &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &trans
-&trans    &trans    &trans    &kp MINUS   &kp EQUAL &trans     &trans &trans  &kp FSLH  &kp LBKT &kp RBKT        &trans    &trans    &trans
+&trans    &trans    &kp UNDER &kp MINUS   &kp EQUAL &kp PLUS   &trans &trans  &kp LBRC  &kp LBKT &kp RBKT        &kp RBRC  &kp FSLH  &trans
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
             >;
 
@@ -94,13 +94,13 @@
 // |  `    |  !   |  @   |  #    |  $    |  %   |                |  ^   |  &   |  *   |  (   |   )   |       |
 // |       | INS  | PSCR | GUI   | MENU  |      |                |      | PGDN | PGUP |      |       |  DEL  |
 // | CAPS  | Pre  |  PP  | Next  |       |      |                |  <-  |   v  |   ^  |  ->  |       | BKSPC |
-// |       |      |      |  -    |  =    |      |      |  |      |  /   |  [   |  ]   |      |       |       |
+// |       |      |  _   |  -    |  =    |  +   |      |  |      |  {   |  [   |  ]   |  }   |   /   |       |
 //                |      |       |       |      |      |  |      |      |      |      |      |
             bindings = <
 &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                        &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &kp K_MENU   &trans                           &trans      &kp PG_DN   &kp PG_UP    &trans      &trans     &kp DEL
 &kp CLCK   &kp K_PREV   &kp K_PP     &kp K_NEXT   &trans       &trans                           &kp LEFT    &kp DOWN    &kp UP       &kp RIGHT   &trans     &kp BSPC
-&trans     &trans       &trans       &kp MINUS    &kp EQUAL    &trans        &trans  &trans     &kp FSLH    &kp LBKT    &kp RBKT     &trans      &trans     &trans
+&trans     &trans       &kp UNDER    &kp MINUS    &kp EQUAL    &kp PLUS      &trans  &trans     &kp LBRC    &kp LBKT    &kp RBKT     &kp RBRC    &kp FSLH   &trans
                         &trans       &trans       &trans       &trans        &trans  &trans     &trans      &trans      &trans       &trans
             >;
 
