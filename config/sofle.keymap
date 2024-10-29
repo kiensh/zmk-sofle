@@ -33,14 +33,14 @@
         dvorak_layer {
             display-name = "dvorak";
 // ------------------------------------------------------------------------------------------------------------
-// |   ~   |  1  |  2  |  3   |  4   |   5   |                   |   6   |  7    |  8    |  9   |   0   |   \   |
-// |  ESC  |  '  |  ,  |  .   |  P   |   Y   |                   |   F   |  G    |  C    |  R   |   L   | BKSPC |
+// |   `   |  0  |  2  |  3   |  4   |   5   |                   |   6   |  7    |  8    |  9   |   0   | BKSPC |
+// |  ESC  |  '  |  ,  |  .   |  P   |   Y   |                   |   F   |  G    |  C    |  R   |   L   |   \   |
 // |  TAB  |  A  |  O  |  E   |  U   |   I   |                   |   D   |  H    |  T    |  N   |   S   |   -   |
 // | SHIFT |  ;  |  Q  |  J   |  K   |   X   |  MUTE  |  |       |   B   |  M    |  W    |  V   |   Z   | SHIFT |
 //               | GUI | LOWER|  ALT |  CTRL |  SPACE |  | ENTER |  GUI  |  ALT  | RAISE | CTRL |
             bindings = <
-&kp TILDE  &kp N1   &kp N2    &kp N3   &kp N4   &kp N5                           &kp N6   &kp N7    &kp N8    &kp N9   &kp N0   &kp BSLH
-&kp ESC    &kp SQT  &kp COMMA &kp DOT  &kp P    &kp Y                            &kp F    &kp G     &kp C     &kp R    &kp L    &kp BSPC
+&kp GRAVE  &kp N1   &kp N2    &kp N3   &kp N4   &kp N5                           &kp N6   &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
+&kp ESC    &kp SQT  &kp COMMA &kp DOT  &kp P    &kp Y                            &kp F    &kp G     &kp C     &kp R    &kp L    &kp BSLH
 &kp TAB    &kp A    &kp O     &kp E    &kp U    &kp I                            &kp D    &kp H     &kp T     &kp N    &kp S    &kp MINUS
 &kp LSHFT  &kp SEMI &kp Q     &kp J    &kp K    &kp X    &kp K_MUTE     &none    &kp B    &kp M     &kp W     &kp V    &kp Z    &kp RSHIFT
                  &kp LGUI  &mo LOWER &kp LALT &kp LCTRL  &kp SPACE      &kp RET  &kp RGUI  &kp RALT  &mo RAISE  &kp RCTRL
@@ -72,13 +72,13 @@
             display-name = "lower";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |   `   |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
+// |   ~   |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |       |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
 // | CAPS  |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |       |
 // |       |     |  _  |  -   |  =   |  +   |        |  |       |  {   |  [    |  ]    |  }   |   /   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&kp GRAVE &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
+&kp TILDE &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
 &trans    &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
 &kp CLCK  &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp ASTERISK    &kp LPAR  &kp RPAR  &trans
 &trans    &trans    &kp UNDER &kp MINUS   &kp EQUAL &kp PLUS   &trans &trans  &kp LBRC  &kp LBKT &kp RBKT        &kp RBRC  &kp FSLH  &trans
@@ -91,13 +91,13 @@
         raise_layer {
             display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
-// |  `    |  !   |  @   |  #    |  $    |  %   |                |  ^   |  &   |  *   |  (   |   )   |       |
+// |  ~    |  !   |  @   |  #    |  $    |  %   |                |  ^   |  &   |  *   |  (   |   )   |       |
 // |       | INS  | PSCR | GUI   | MENU  |      |                |      | PGDN | PGUP |      |       |  DEL  |
 // | CAPS  | Pre  |  PP  | Next  |       |      |                |  <-  |   v  |   ^  |  ->  |       | BKSPC |
 // |       |      |  _   |  -    |  =    |  +   |      |  |      |  {   |  [   |  ]   |  }   |   /   |       |
 //                |      |       |       |      |      |  |      |      |      |      |      |
             bindings = <
-&kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                        &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &trans
+&kp TILDE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                        &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &kp K_MENU   &trans                           &trans      &kp PG_DN   &kp PG_UP    &trans      &trans     &kp DEL
 &kp CLCK   &kp K_PREV   &kp K_PP     &kp K_NEXT   &trans       &trans                           &kp LEFT    &kp DOWN    &kp UP       &kp RIGHT   &trans     &kp BSPC
 &trans     &trans       &kp UNDER    &kp MINUS    &kp EQUAL    &kp PLUS      &trans  &trans     &kp LBRC    &kp LBKT    &kp RBKT     &kp RBRC    &kp FSLH   &trans
